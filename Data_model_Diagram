@@ -1,0 +1,33 @@
+Seattle GIS Data
+
+        |
+        |
+        ↓
+
+Raw Layers
+
+Graffiti Points
+Tree Canopy
+Parks
+Land Use
+Census
+Road Network
+
+        |
+        ↓
+
+250m Grid
+
+        |
+        ↓
+
+Derived Variables
+
+Graffiti Count
+Landscape Metrics
+Control Variables
+
+        |
+        ↓
+
+Statistical Model
