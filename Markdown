@@ -1,0 +1,131 @@
+# Vandalism_Seattle Research Framework
+
+## Title
+Spatial Relationship Between Urban Green Infrastructure Configuration and Reported Graffiti in Seattle
+
+## Research Question
+
+How are the amount and spatial configuration of urban green infrastructure associated with the spatial distribution of reported graffiti?
+
+---
+
+# Conceptual Framework
+
+Green Infrastructure
+
+## Composition
+- Tree Canopy Coverage (PLAND)
+- Park Coverage
+
+## Configuration
+- Patch Density (PD)
+- Mean Patch Size (AREA_MN)
+- Edge Density (ED)
+- Euclidean Nearest Neighbor Distance (ENN_MN)
+- Connectivity (COHESION)
+
+↓
+
+Reported Graffiti Density
+
+---
+
+# Dependent Variable
+
+## Reported Graffiti Density
+
+Definition:
+Number of reported graffiti incidents per spatial unit.
+
+Important limitation:
+This represents reported incidents, not all actual vandalism events.
+
+---
+
+# Independent Variables
+
+## Landscape Ecology Metrics
+
+| Metric | Concept |
+|---|---|
+| PLAND | Amount of green infrastructure |
+| PD | Fragmentation |
+| AREA_MN | Patch size |
+| ED | Edge structure |
+| ENN_MN | Isolation |
+| COHESION | Connectivity |
+
+---
+
+# Control Variables
+
+- Population Density
+- Median Household Income
+- Land Use Mix
+- Commercial Land Percentage
+- Road Density
+- Intersection Density
+
+---
+
+# Spatial Unit
+
+Primary:
+250 × 250 m Grid
+
+Sensitivity analysis:
+100 × 100 m
+500 × 500 m
+
+---
+
+# Hypotheses
+
+H1:
+Green infrastructure coverage is associated with reported graffiti density.
+
+H2:
+Higher fragmentation of green infrastructure is associated with higher graffiti density.
+
+H3:
+Patch size influences graffiti distribution.
+
+H4:
+Higher edge density is associated with graffiti occurrence.
+
+H5:
+Higher green connectivity is associated with different graffiti patterns.
+
+H6:
+Higher isolation of green patches is associated with graffiti density.
+
+---
+
+# Analysis Workflow
+
+1. Data Audit
+2. Spatial Grid Creation
+3. Spatial Join of graffiti points
+4. Landscape Metrics Calculation
+5. Moran's I
+6. Hotspot Analysis (Getis-Ord Gi*)
+7. Regression Models
+   - Negative Binomial Regression
+   - Spatial Regression
+   - MGWR
+
+---
+
+# Current Status
+
+Completed:
+- Research question
+- Conceptual framework
+- Variable selection
+- Hypotheses
+- Initial methodology
+
+Next:
+- Seattle Graffiti Dataset Audit
+- Data extraction
+- GIS preprocessing
