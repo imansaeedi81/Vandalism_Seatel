@@ -1,33 +1,100 @@
-Seattle GIS Data
+                         RAW DATA SOURCES
+                                │
+ ┌──────────────────────────────┼──────────────────────────────┐
+ │                              │                              │
+ ▼                              ▼                              ▼
 
-        |
-        |
-        ↓
+Graffiti Reports          Green Infrastructure           Urban Context
 
-Raw Layers
+(Point Data)              (Landscape Data)               (Control Data)
 
-Graffiti Points
-Tree Canopy
-Parks
-Land Use
-Census
-Road Network
+ │                         │                              │
+ │                         │                              │
+ ▼                         ▼                              ▼
 
-        |
-        ↓
+Graffiti Points            Tree Canopy                  Census Data
+(Date, Location)           Parks                        Land Use
+                           Vegetation                   Roads
+                               
+                                │
+                                ▼
 
-250m Grid
+                         DATA PREPROCESSING
 
-        |
-        ↓
+                  Coordinate System Harmonization
+                  Cleaning Missing Values
+                  Removing Duplicates
+                  Spatial Clipping (Seattle Boundary)
 
-Derived Variables
+                                │
+                                ▼
 
-Graffiti Count
-Landscape Metrics
-Control Variables
+                         SPATIAL ANALYSIS UNIT
 
-        |
-        ↓
+                         250m × 250m Grid
 
-Statistical Model
+                                │
+
+          ┌─────────────────────┼─────────────────────┐
+          │                     │                     │
+
+          ▼                     ▼                     ▼
+
+Graffiti Aggregation    Landscape Metrics       Control Variables
+
+Graffiti Count          PLAND                   Population Density
+Graffiti Density        PD                      Income
+                        AREA_MN                 Land Use Mix
+                        ED                      Road Density
+                        ENN_MN
+                        COHESION
+
+          │                     │                     │
+          └─────────────────────┼─────────────────────┘
+
+                                ▼
+
+                      FINAL ANALYTICAL DATASET
+
+
+Grid_ID | Graffiti | PLAND | PD | ED | ENN | COHESION |
+Population | Income | Land Use | Roads
+
+
+                                │
+                                ▼
+
+                        STATISTICAL ANALYSIS
+
+
+                 1. Exploratory Spatial Analysis
+
+                    Moran's I
+                    KDE
+                    Hotspot Analysis
+
+
+                                │
+
+
+                 2. Regression Modeling
+
+
+                    Negative Binomial Regression
+
+                                │
+
+                    Spatial Regression Models
+
+                    Spatial Lag
+                    Spatial Error
+                    MGWR
+
+
+                                │
+                                ▼
+
+                         RESEARCH FINDINGS
+
+          Relationship between Green Infrastructure
+          Configuration and Reported Graffiti Pattern
